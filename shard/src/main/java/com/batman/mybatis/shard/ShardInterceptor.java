@@ -9,6 +9,7 @@ import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.util.StringUtils;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.*;
 
@@ -67,7 +68,7 @@ public class ShardInterceptor implements Interceptor {
         Field field = boundSql.getClass().getDeclaredField("sql");
         field.setAccessible(true);
         field.set(boundSql, newSql);
-        invocation.getArgs()[0] = copyFromMappedStatement(mappedStatement, new BoundSqlSqlSource(boundSql));
+        invocation.getArgs()[0] = copyMappedStatement(mappedStatement, new BoundSqlSqlSource(boundSql));
 
         // 执行sql
         return invocation.proceed();
