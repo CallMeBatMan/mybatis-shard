@@ -54,15 +54,21 @@ public class ShardInterceptor implements Interceptor {
         Map<String, Object> parameterMap = (HashMap<String, Object>) boundSql.getParameterObject();
         String originSql = boundSql.getSql();
         String newSql = tableShard.strategy().newInstance().tableShard(originSql, parameterMap, tableShard.shardKey());
-        invocation.getArgs()[0] = copyMappedStatement(
-                mappedStatement,
-                new BoundSqlSqlSource(
-                        new BoundSql(
-                                mappedStatement.getConfiguration(), newSql,
-                                boundSql.getParameterMappings(), boundSql.getParameterObject()
-                        )
-                )
-        );
+//         invocation.getArgs()[0] = copyMappedStatement(
+//                 mappedStatement,
+//                 new BoundSqlSqlSource(
+//                         new BoundSql(
+//                                 mappedStatement.getConfiguration(), newSql,
+//                                 boundSql.getParameterMappings(), boundSql.getParameterObject()
+//                         )
+//                 )
+//         );
+        // 通过反射修改sql语句
+        Field field = boundSql.getClass().getDeclaredField("sql");
+        field.setAccessible(true);
+        field.set(boundSql, newSql);
+        invocation.getArgs()[0] = copyFromMappedStatement(mappedStatement, new BoundSqlSqlSource(boundSql));
+
         // 执行sql
         return invocation.proceed();
     }
