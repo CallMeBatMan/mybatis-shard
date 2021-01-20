@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.batman.shard.demo.dao.UserMapper">
-    <select id="getAllUser" resultType="com.batman.shard.demo.dao.User">
+<mapper namespace="com.github.callbatman.shard.demo.dao.UserMapper">
+    <select id="getAllUser" resultType="com.github.callbatman.shard.demo.dao.User">
         select * from tbl_user
     </select>
 </mapper>

@@ -1,7 +1,7 @@
-package com.batman.shard.demo;
+package com.github.callbatman.shard.demo;
 
-import com.batman.mybatis.shard.ITableShardStrategy;
-import com.batman.mybatis.shard.TableCacheUtil;
+import com.github.callmebatman.mybatis.shard.ITableShardStrategy;
+import com.github.callmebatman.mybatis.shard.TableCacheUtil;
 import org.springframework.util.StringUtils;
 
 import java.util.Map;

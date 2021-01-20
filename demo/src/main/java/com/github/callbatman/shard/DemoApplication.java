@@ -1,7 +1,7 @@
-package com.batman.shard;
+package com.github.callbatman.shard;
 
-import com.batman.shard.demo.dao.User;
-import com.batman.shard.demo.dao.UserMapper;
+import com.github.callbatman.shard.demo.dao.User;
+import com.github.callbatman.shard.demo.dao.UserMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;

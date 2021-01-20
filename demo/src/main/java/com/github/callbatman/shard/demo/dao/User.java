@@ -1,4 +1,4 @@
-package com.batman.shard.demo.dao;
+package com.github.callbatman.shard.demo.dao;
 
 public class User {
 

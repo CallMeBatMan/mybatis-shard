@@ -1,4 +1,4 @@
-package com.batman.shard.demo;
+package com.github.callbatman.shard.demo;
 
 import java.text.MessageFormat;
 import java.util.HashSet;

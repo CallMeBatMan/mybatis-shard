@@ -1,7 +1,7 @@
-package com.batman.shard.demo.dao;
+package com.github.callbatman.shard.demo.dao;
 
 import com.batman.mybatis.shard.TableShard;
-import com.batman.shard.demo.VestTableShardStrategy;
+import com.github.callbatman.shard.demo.VestTableShardStrategy;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
