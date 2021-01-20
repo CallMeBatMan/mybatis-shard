@@ -1,4 +1,4 @@
-package com.batman.mybatis.shard;
+package com.github.callmebatman.mybatis.shard;
 
 import java.util.Collections;
 import java.util.HashSet;

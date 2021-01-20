@@ -1,4 +1,4 @@
-package com.batman.mybatis.shard;
+package com.github.callmebatman.mybatis.shard;
 
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
